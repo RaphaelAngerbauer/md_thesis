@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+gfp_deg_fluorometry        1
+total                      1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed May  1 16:13:30 2024]
+localrule gfp_deg_fluorometry:
+    input: src/data/gfp_deg/raw/fluorometry/1/Spark.xlsx, src/data/gfp_deg/raw/fluorometry/1/Group.xlsx, src/data/gfp_deg/raw/fluorometry/1/Bradford.xlsx, src/data/gfp_deg/raw/fluorometry/1/BradLab.xlsx
+    output: src/data/gfp_deg/processed/fluorometry/1/results.csv
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/tmp
+
+[Wed May  1 16:13:31 2024]
+Error in rule gfp_deg_fluorometry:
+    jobid: 0
+    input: src/data/gfp_deg/raw/fluorometry/1/Spark.xlsx, src/data/gfp_deg/raw/fluorometry/1/Group.xlsx, src/data/gfp_deg/raw/fluorometry/1/Bradford.xlsx, src/data/gfp_deg/raw/fluorometry/1/BradLab.xlsx
+    output: src/data/gfp_deg/processed/fluorometry/1/results.csv
+    shell:
+        
+    python src/processing/fluorometry_1d.py -s src/data/gfp_deg/raw/fluorometry/1/Spark.xlsx -b src/data/gfp_deg/raw/fluorometry/1/Bradford.xlsx -sl src/data/gfp_deg/raw/fluorometry/1/Group.xlsx -bl src/data/gfp_deg/raw/fluorometry/1/BradLab.xlsx -o src/data/gfp_deg/processed/fluorometry/1/results.csv
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-01T161330.965001.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

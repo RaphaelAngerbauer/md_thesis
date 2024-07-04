@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+gfp_deg_fluorometry        1
+total                      1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Apr 12 19:07:27 2024]
+localrule gfp_deg_fluorometry:
+    input: src/data/gfp_deg/raw/fluorometry/1/Spark.xlsx, src/data/gfp_deg/raw/fluorometry/1/Group.xlsx, src/data/gfp_deg/raw/fluorometry/1/Bradford.xlsx, src/data/gfp_deg/raw/fluorometry/1/BradLab.xlsx
+    output: src/data/gfp_deg/processed/fluorometry/1/results.csv
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/tmp
+
+[Fri Apr 12 19:07:28 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-04-12T190727.951400.snakemake.log

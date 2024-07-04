@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+gfp_deg_fluorometry        1
+total                      1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Apr 12 18:03:58 2024]
+localrule gfp_deg_fluorometry:
+    input: src/data/gfp_deg/raw/fluorometry/1/Spark.xlsx, src/data/gfp_deg/raw/fluorometry/1/Group.xlsx, src/data/gfp_deg/raw/fluorometry/1/Bradford.xlsx, src/data/gfp_deg/raw/fluorometry/1/BradLab.xlsx
+    output: src/data/gfp_deg/processed/fluorometry/1/BradLab.xlsx
+    jobid: 0
+    reason: Missing output files: src/data/gfp_deg/processed/fluorometry/1/BradLab.xlsx
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule gfp_deg_fluorometry in file /home/raphael/projects/diploma_thesis/snakefile, line 2:
+Job 0 completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+src/data/gfp_deg/processed/fluorometry/1/BradLab.xlsx (missing locally, parent dir not present)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-04-12T180358.033038.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

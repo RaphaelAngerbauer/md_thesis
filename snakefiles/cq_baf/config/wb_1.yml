@@ -1,0 +1,4 @@
+groups:
+  linkers: [Ctrl, TP, FY, Ctrl, TP, FY, Ctrl, TP, FY]
+  treatment: ['DMSO', 'DMSO', 'DMSO', 'CQ', 'CQ', 'CQ', 'BAF', 'BAF', 'BAF'] 
+regex: '([A-z0-9-]+)_D.csv'

@@ -1,0 +1,5 @@
+# Preface {.unnumbered}
+
+This is a Laboratory Notebook for experiments conducted from March 2022 to June 2023. The results obtained during this time were used to write the thesis "" to obtain the title "Dr. med. univ.". 
+
+The notebook is sorted by experiments and not in chronological order. After each individual repitition has been desccribed, a summary of all the data is show.

@@ -1,0 +1,8 @@
+data_path: '/media/raphael/PortableSSD/diploma_thesis/Data'
+data_folders:
+  autophagy_inhibition: '5. Plasmid-mediated degradation does not get affected by Inhibition of Autophagy'
+  styx: '4. Plasmid does not inhibit Synthesis of GFP-tagged α-Synuclein'
+  GFP: '1. Plasmid can degrade GFP'
+
+figure_params:
+  palette: ["#003f5c","#ffa600","#bc5090"]
